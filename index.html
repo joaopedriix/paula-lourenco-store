@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paula Lourenço Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --bg:#FFF9F6;
+    --bg-alt:#F9E8E5;
+    --surface:#FFFFFF;
+    --text:#3E2226;
+    --text-soft:#684044;
+    --accent:#8D4C55;
+    --accent-hover:#733D45;
+    --accent-soft:#D9AAA5;
+    --accent-soft-bg:rgba(217,170,165,.22);
+    --line:rgba(141,76,85,.18);
+    --shadow:0 18px 40px -20px rgba(104,64,68,.35);
+    --focus:#8D4C55;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#231316;
+      --bg-alt:#2C171B;
+      --surface:#2C171B;
+      --text:#F4E5E2;
+      --text-soft:#E3B9B4;
+      --accent:#E3A6AC;
+      --accent-hover:#EFC0C4;
+      --accent-soft:#5C333A;
+      --accent-soft-bg:rgba(227,166,172,.14);
+      --line:rgba(227,166,172,.2);
+      --shadow:0 18px 40px -18px rgba(0,0,0,.55);
+      --focus:#E3A6AC;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#231316;
+    --bg-alt:#2C171B;
+    --surface:#2C171B;
+    --text:#F4E5E2;
+    --text-soft:#E3B9B4;
+    --accent:#E3A6AC;
+    --accent-hover:#EFC0C4;
+    --accent-soft:#5C333A;
+    --accent-soft-bg:rgba(227,166,172,.14);
+    --line:rgba(227,166,172,.2);
+    --shadow:0 18px 40px -18px rgba(0,0,0,.55);
+    --focus:#E3A6AC;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation-duration:.001ms !important; transition-duration:.001ms !important;} }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Jost', ui-sans-serif, system-ui, sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,.display{
+    font-family:'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-weight:600;
+    line-height:1.08;
+    text-wrap:balance;
+    margin:0;
+    color:var(--text);
+  }
+
+  .eyebrow{
+    font-size:.72rem;
+    font-weight:600;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--accent);
+  }
+
+  a{color:inherit;}
+  img{display:block; max-width:100%;}
+  button{font-family:inherit; cursor:pointer;}
+
+  .wrap{max-width:1180px; margin:0 auto; padding:0 clamp(1.1rem, 3vw, 2.5rem);}
+
+  /* ---------- header ---------- */
+  header.site{
+    position:sticky; top:0; z-index:40;
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-row{
+    display:flex; align-items:center; gap:1.5rem;
+    padding:.85rem 0;
+  }
+  .logo{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:700;
+    font-size:1.5rem;
+    letter-spacing:.02em;
+    white-space:nowrap;
+  }
+  .logo em{color:var(--accent); font-style:italic;}
+  nav.primary{
+    display:flex; gap:1.4rem; flex:1;
+    overflow-x:auto; scrollbar-width:none;
+    font-size:.86rem; font-weight:500;
+  }
+  nav.primary::-webkit-scrollbar{display:none;}
+  nav.primary a{
+    white-space:nowrap; text-decoration:none; color:var(--text-soft);
+    padding:.3rem .1rem; border-bottom:2px solid transparent;
+    transition:color .15s, border-color .15s;
+  }
+  nav.primary a:hover, nav.primary a:focus-visible{color:var(--accent); border-color:var(--accent-soft);}
+  .header-actions{display:flex; align-items:center; gap:.7rem;}
+  .icon-btn{
+    position:relative;
+    display:inline-flex; align-items:center; justify-content:center;
+    width:2.5rem; height:2.5rem; border-radius:999px;
+    border:1px solid var(--line); background:var(--surface); color:var(--text);
+    transition:border-color .15s, transform .15s;
+  }
+  .icon-btn:hover{border-color:var(--accent-soft); transform:translateY(-1px);}
+  .icon-btn:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible{
+    outline:2px solid var(--focus); outline-offset:2px;
+  }
+  .badge-count{
+    position:absolute; top:-6px; right:-6px;
+    background:var(--accent); color:#fff;
+    font-size:.65rem; font-weight:700; font-variant-numeric:tabular-nums;
+    min-width:1.15rem; height:1.15rem; border-radius:999px;
+    align-items:center; justify-content:center; padding:0 .25rem;
+  }
+  .badge-count:not([hidden]){display:flex;}
+  .badge-count[hidden]{display:none;}
+  .btn-wpp-mini{
+    display:inline-flex; align-items:center; gap:.4rem;
+    background:var(--accent); color:#fff; border:none;
+    padding:.55rem 1rem; border-radius:999px; font-size:.82rem; font-weight:600;
+    text-decoration:none; transition:background .15s, transform .15s;
+  }
+  .btn-wpp-mini:hover{background:var(--accent-hover); transform:translateY(-1px);}
+
+  .mobile-nav-toggle{display:none;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative; overflow:hidden;
+    display:grid; grid-template-columns:1.05fr .95fr; align-items:stretch;
+    min-height:min(86vh, 640px);
+    border-bottom:1px solid var(--line);
+  }
+  .hero-copy{
+    display:flex; flex-direction:column; justify-content:center; gap:1.4rem;
+    padding:clamp(2rem,5vw,4.5rem);
+  }
+  .hero-copy .display{font-size:clamp(2.5rem, 4.6vw, 3.8rem);}
+  .hero-copy .tagline{
+    font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:500;
+    color:var(--accent); font-size:1.25rem;
+  }
+  .hero-copy p.lead{max-width:46ch; color:var(--text-soft); font-size:1.02rem;}
+  .hero-ctas{display:flex; gap:.85rem; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:.5rem;
+    padding:.85rem 1.5rem; border-radius:999px; font-size:.92rem; font-weight:600;
+    text-decoration:none; border:1px solid transparent; transition:transform .15s, background .15s, border-color .15s;
+  }
+  .btn-primary{background:var(--accent); color:#fff;}
+  .btn-primary:hover{background:var(--accent-hover); transform:translateY(-1px);}
+  .btn-ghost{background:transparent; color:var(--text); border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--accent-soft); color:var(--accent);}
+
+  .hero-media{position:relative;}
+  .hero-media img{width:100%; height:100%; object-fit:cover; object-position:center 20%;}
+  .hero-media::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(180deg, transparent 55%, color-mix(in srgb, var(--bg) 70%, transparent) 100%);
+  }
+  .hero-media .hero-note{
+    position:absolute; left:1.5rem; bottom:1.5rem; z-index:2;
+    background:color-mix(in srgb, var(--surface) 88%, transparent);
+    border:1px solid var(--line);
+    padding:.6rem .9rem; border-radius:.9rem; font-size:.78rem; color:var(--text-soft);
+    backdrop-filter:blur(6px);
+  }
+
+  @media (max-width:860px){
+    .hero{grid-template-columns:1fr;}
+    .hero-media{min-height:340px; order:-1;}
+  }
+
+  /* ---------- demo banner ---------- */
+  .demo-banner{
+    background:var(--accent-soft-bg); border-bottom:1px solid var(--line);
+    font-size:.82rem; color:var(--text-soft); text-align:center; padding:.55rem 1rem;
+  }
+  .demo-banner strong{color:var(--accent);}
+
+  /* ---------- section shells ---------- */
+  section{padding:clamp(3rem,6vw,5rem) 0;}
+  section.alt{background:var(--bg-alt);}
+  .section-head{
+    display:flex; align-items:flex-end; justify-content:space-between; gap:1rem;
+    margin-bottom:2rem; flex-wrap:wrap;
+  }
+  .section-head h2{font-size:clamp(1.7rem, 3vw, 2.3rem);}
+  .section-head p{color:var(--text-soft); margin:.35rem 0 0; max-width:52ch;}
+
+  /* ---------- categories ---------- */
+  .cat-rail{
+    display:flex; gap:.7rem; overflow-x:auto; padding-bottom:.4rem; scrollbar-width:thin;
+  }
+  .cat-chip{
+    flex:0 0 auto; padding:.55rem 1.15rem; border-radius:999px;
+    border:1px solid var(--line); background:var(--surface); color:var(--text-soft);
+    font-size:.85rem; font-weight:500; transition:all .15s;
+  }
+  .cat-chip:hover{border-color:var(--accent-soft); color:var(--accent);}
+  .cat-chip.active{background:var(--accent); color:#fff; border-color:var(--accent);}
+
+  /* ---------- product grid ---------- */
+  .grid-products{
+    display:grid; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); gap:1.6rem;
+  }
+  .card{
+    background:var(--surface); border:1px solid var(--line); border-radius:1.1rem;
+    overflow:hidden; box-shadow:var(--shadow); display:flex; flex-direction:column;
+    transition:transform .2s ease;
+  }
+  .card:hover{transform:translateY(-4px);}
+  .card-media{position:relative; aspect-ratio:4/5; overflow:hidden; background:var(--bg-alt);}
+  .card-media img{width:100%; height:100%; object-fit:cover; transition:transform .4s ease;}
+  .card:hover .card-media img{transform:scale(1.045);}
+  .tag-new{
+    position:absolute; top:.7rem; left:.7rem;
+    background:var(--surface); color:var(--accent); border:1px solid var(--accent-soft);
+    font-size:.68rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+    padding:.25rem .55rem; border-radius:999px;
+  }
+  .card-body{padding:1.1rem 1.15rem 1.3rem; display:flex; flex-direction:column; gap:.5rem; flex:1;}
+  .card-body h3{font-size:1.22rem;}
+  .card-cat{font-size:.74rem; color:var(--text-soft); text-transform:uppercase; letter-spacing:.06em;}
+  .swatches{display:flex; gap:.3rem; flex-wrap:wrap; margin-top:.1rem;}
+  .swatch{width:.95rem; height:.95rem; border-radius:50%; border:1px solid var(--line); box-shadow:inset 0 0 0 1px rgba(255,255,255,.5);}
+  .price-row{display:flex; align-items:baseline; justify-content:space-between; margin-top:auto; padding-top:.4rem;}
+  .price{font-family:'Jost',sans-serif; font-weight:600; font-size:1.15rem; font-variant-numeric:tabular-nums;}
+  .price-note{font-size:.66rem; color:var(--text-soft); display:block; font-weight:400;}
+  .card-cta{
+    width:100%; margin-top:.6rem; padding:.7rem 1rem; border-radius:.8rem;
+    background:var(--bg-alt); color:var(--accent); border:1px solid var(--accent-soft);
+    font-weight:600; font-size:.86rem; transition:background .15s, color .15s;
+  }
+  .card-cta:hover{background:var(--accent); color:#fff;}
+  .empty-cat{
+    grid-column:1/-1; text-align:center; padding:2.5rem 1rem; color:var(--text-soft);
+    border:1px dashed var(--line); border-radius:1rem; font-size:.95rem;
+  }
+
+  /* ---------- como comprar ---------- */
+  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:1.6rem;}
+  .step{
+    background:var(--surface); border:1px solid var(--line); border-radius:1.1rem; padding:1.6rem;
+    display:flex; flex-direction:column; gap:.6rem;
+  }
+  .step-num{
+    font-family:'Cormorant Garamond',serif; font-weight:700; font-size:2.1rem; color:var(--accent-soft);
+  }
+  .step h3{font-size:1.15rem;}
+  .step p{color:var(--text-soft); margin:0; font-size:.92rem;}
+  @media (max-width:760px){.steps{grid-template-columns:1fr;}}
+
+  /* ---------- loja / instagram ---------- */
+  .info-grid{display:grid; grid-template-columns:1fr 1fr; gap:2rem;}
+  @media (max-width:760px){.info-grid{grid-template-columns:1fr;}}
+  .info-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:1.1rem; padding:1.8rem;
+  }
+  .info-card h3{font-size:1.3rem; margin-bottom:.7rem;}
+  .info-card p{color:var(--text-soft); margin:.25rem 0;}
+  .info-card .btn{margin-top:1rem;}
+  dl.hours{margin:.8rem 0 0; font-size:.92rem;}
+  dl.hours div{display:flex; justify-content:space-between; padding:.3rem 0; border-bottom:1px dashed var(--line);}
+  dl.hours dt{color:var(--text-soft);}
+  dl.hours dd{margin:0; font-weight:600; font-variant-numeric:tabular-nums;}
+
+  /* ---------- faq ---------- */
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-item summary{
+    padding:1.1rem .2rem; font-weight:600; list-style:none; cursor:pointer;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:"+"; font-size:1.3rem; color:var(--accent); transition:transform .2s;}
+  .faq-item[open] summary::after{transform:rotate(45deg);}
+  .faq-item p{margin:0 .2rem 1.1rem; color:var(--text-soft); font-size:.92rem; max-width:65ch;}
+
+  .policy-mini{color:var(--text-soft); font-size:.92rem; max-width:65ch; margin:.4rem 0 1.4rem;}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--bg-alt); border-top:1px solid var(--line); padding:3rem 0 2rem;}
+  .footer-grid{display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:2rem; margin-bottom:2rem;}
+  @media (max-width:760px){.footer-grid{grid-template-columns:1fr;}}
+  footer h4{font-size:.8rem; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin:0 0 .8rem;}
+  footer ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:.5rem;}
+  footer a{text-decoration:none; color:var(--text-soft); font-size:.9rem;}
+  footer a:hover{color:var(--accent);}
+  .footer-bottom{
+    border-top:1px solid var(--line); padding-top:1.4rem; margin-top:1rem;
+    display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap;
+    font-size:.8rem; color:var(--text-soft);
+  }
+
+  /* ---------- floating wpp ---------- */
+  .float-wpp{
+    position:fixed; right:1.2rem; bottom:1.2rem; z-index:50;
+    display:inline-flex; align-items:center; gap:.5rem;
+    background:var(--accent); color:#fff; text-decoration:none;
+    padding:.85rem 1.15rem; border-radius:999px; box-shadow:0 12px 30px -10px rgba(0,0,0,.4);
+    font-weight:600; font-size:.88rem; transition:transform .15s, background .15s;
+  }
+  .float-wpp:hover{background:var(--accent-hover); transform:translateY(-2px);}
+
+  /* ---------- cart drawer ---------- */
+  .overlay{
+    position:fixed; inset:0; background:rgba(20,10,11,.45); backdrop-filter:blur(2px);
+    opacity:0; pointer-events:none; transition:opacity .25s; z-index:60;
+  }
+  .overlay.open{opacity:1; pointer-events:auto;}
+  .drawer{
+    position:fixed; top:0; right:0; height:100%; width:min(420px,92vw);
+    background:var(--surface); z-index:61; box-shadow:-20px 0 40px -20px rgba(0,0,0,.35);
+    transform:translateX(100%); transition:transform .3s ease;
+    display:flex; flex-direction:column;
+  }
+  .drawer.open{transform:translateX(0);}
+  .drawer-head{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:1.2rem 1.3rem; border-bottom:1px solid var(--line);
+  }
+  .drawer-head h3{font-size:1.3rem;}
+  .drawer-close{background:none; border:none; font-size:1.4rem; color:var(--text-soft); line-height:1;}
+  .drawer-body{flex:1; overflow-y:auto; padding:1rem 1.3rem;}
+  .cart-empty{color:var(--text-soft); text-align:center; padding:3rem 1rem; font-size:.95rem;}
+  .cart-item{display:grid; grid-template-columns:64px 1fr auto; gap:.8rem; padding:.9rem 0; border-bottom:1px solid var(--line);}
+  .cart-item img{width:64px; height:80px; object-fit:cover; border-radius:.6rem;}
+  .cart-item h4{font-size:.98rem; margin:0 0 .2rem;}
+  .cart-item .meta{font-size:.78rem; color:var(--text-soft); margin:0 0 .4rem;}
+  .qty-row{display:flex; align-items:center; gap:.5rem;}
+  .qty-btn{
+    width:1.6rem; height:1.6rem; border-radius:50%; border:1px solid var(--line); background:var(--bg-alt);
+    display:flex; align-items:center; justify-content:center; font-weight:700; color:var(--accent);
+  }
+  .qty-val{min-width:1.2rem; text-align:center; font-variant-numeric:tabular-nums; font-weight:600;}
+  .cart-item .item-right{display:flex; flex-direction:column; align-items:flex-end; justify-content:space-between;}
+  .cart-item .item-price{font-weight:600; font-variant-numeric:tabular-nums;}
+  .remove-btn{background:none; border:none; color:var(--text-soft); font-size:.78rem; text-decoration:underline;}
+  .drawer-foot{border-top:1px solid var(--line); padding:1.1rem 1.3rem 1.4rem; flex-direction:column; gap:.7rem;}
+  .drawer-foot:not([hidden]){display:flex;}
+  .drawer-foot[hidden]{display:none;}
+  .subtotal-row{display:flex; justify-content:space-between; font-size:1.05rem; font-weight:600;}
+  .subtotal-row span:last-child{font-variant-numeric:tabular-nums;}
+  .drawer-note{font-size:.76rem; color:var(--text-soft); margin:0;}
+  .drawer-actions{display:flex; gap:.6rem; flex-wrap:wrap;}
+  .drawer-actions .btn{flex:1; justify-content:center;}
+  .btn-link-clear{background:none; border:none; color:var(--text-soft); font-size:.8rem; text-decoration:underline; align-self:center;}
+
+  /* ---------- product modal ---------- */
+  .modal-overlay{
+    position:fixed; inset:0; background:rgba(20,10,11,.5); backdrop-filter:blur(2px);
+    display:flex; align-items:center; justify-content:center; padding:1.2rem;
+    opacity:0; pointer-events:none; transition:opacity .2s; z-index:70;
+  }
+  .modal-overlay.open{opacity:1; pointer-events:auto;}
+  .modal{
+    background:var(--surface); border-radius:1.2rem; max-width:760px; width:100%;
+    max-height:88vh; overflow-y:auto; display:grid; grid-template-columns:1fr 1fr;
+    box-shadow:var(--shadow); position:relative;
+  }
+  @media (max-width:640px){.modal{grid-template-columns:1fr;}}
+  .modal-close{
+    position:absolute; top:.8rem; right:.8rem; z-index:2;
+    width:2.1rem; height:2.1rem; border-radius:50%; border:none;
+    background:var(--surface); color:var(--text); font-size:1.1rem; box-shadow:var(--shadow);
+  }
+  .modal-media img{width:100%; height:100%; object-fit:cover; min-height:260px;}
+  .modal-info{padding:1.6rem; display:flex; flex-direction:column; gap:.9rem;}
+  .modal-info h3{font-size:1.6rem;}
+  .modal-info .desc{color:var(--text-soft); font-size:.92rem;}
+  .field-label{font-size:.76rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--text-soft); margin-bottom:.4rem; display:block;}
+  .option-row{display:flex; gap:.5rem; flex-wrap:wrap;}
+  .opt-btn{
+    padding:.45rem .9rem; border-radius:999px; border:1px solid var(--line); background:var(--bg-alt);
+    font-size:.85rem; font-weight:500; color:var(--text);
+  }
+  .opt-btn.selected{background:var(--accent); border-color:var(--accent); color:#fff;}
+  .opt-swatch{
+    width:2rem; height:2rem; border-radius:50%; border:2px solid transparent; box-shadow:0 0 0 1px var(--line);
+  }
+  .opt-swatch.selected{border-color:var(--accent);}
+  .modal-qty{display:flex; align-items:center; gap:.7rem;}
+  .modal-price{font-size:1.3rem; font-weight:600; color:var(--accent);}
+  .modal-actions{display:flex; flex-direction:column; gap:.5rem; margin-top:.3rem;}
+  .link-doubt{font-size:.82rem; text-align:center; color:var(--text-soft); text-decoration:underline;}
+
+  .visually-hidden{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap;}
+</style>
+</head>
+<body>
+
+<div class="demo-banner">
+  <strong>Site modelo/demonstração</strong> — fotos reais do Instagram @paulalourenco_store, preços de exemplo a confirmar com a Paula.
+</div>
+
+<header class="site">
+  <div class="wrap header-row">
+    <div class="logo">Paula Lourenço <em>Store</em></div>
+    <nav class="primary" aria-label="Categorias">
+      <a href="#lancamentos" data-filter="all">Lançamentos</a>
+      <a href="#lancamentos" data-filter="Vestidos">Vestidos</a>
+      <a href="#lancamentos" data-filter="Blusas">Blusas</a>
+      <a href="#lancamentos" data-filter="Calças">Calças</a>
+      <a href="#lancamentos" data-filter="Saias">Saias</a>
+      <a href="#lancamentos" data-filter="Conjuntos">Conjuntos</a>
+      <a href="#lancamentos" data-filter="Acessórios">Acessórios</a>
+      <a href="#loja">Loja física</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <div class="header-actions">
+      <a class="icon-btn" href="https://www.instagram.com/paulalourenco_store/" target="_blank" rel="noopener" aria-label="Instagram da Paula Lourenço Store">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/></svg>
+      </a>
+      <button class="icon-btn" id="cart-toggle" aria-label="Abrir carrinho">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.8h7.2a2 2 0 0 0 2-1.6L20 8H6"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>
+        <span class="badge-count" id="cart-count" hidden>0</span>
+      </button>
+      <a class="btn-wpp-mini" href="__WPP_LINK_GERAL__" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.1 8.1 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1s-.6.8-.8 1c-.1.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.6-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4.1-.1 0-.3 0-.4s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.8c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3Z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">Moda feminina · São Joaquim da Barra</span>
+    <h1 class="display">Seu estilo<br>começa aqui.</h1>
+    <p class="tagline">peças com alma de boutique, para todos os seus momentos</p>
+    <p class="lead">Monte seu look, adicione ao carrinho e finalize o pedido direto no WhatsApp com a Paula — sem cadastro, sem complicação.</p>
+    <div class="hero-ctas">
+      <a href="#lancamentos" class="btn btn-primary">Ver novidades</a>
+      <a href="#como-comprar" class="btn btn-ghost">Como funciona</a>
+    </div>
+  </div>
+  <div class="hero-media">
+    <img src="images/vestido-midi-renda-ceu.jpg" alt="Vestido midi de renda azul, coleção Paula Lourenço Store">
+    <div class="hero-note">📍 Rua Pará, 596 — Jardim Guarujá, São Joaquim da Barra/SP</div>
+  </div>
+</section>
+
+<section id="lancamentos">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Vitrine</span>
+        <h2>Lançamentos</h2>
+        <p>Peças recém-chegadas, fotografadas direto do nosso Instagram. Escolha tamanho e cor e monte seu carrinho.</p>
+      </div>
+    </div>
+    <div class="cat-rail" id="cat-rail" role="tablist" aria-label="Filtrar por categoria">
+      <button class="cat-chip active" data-filter="all">Todas</button>
+      <button class="cat-chip" data-filter="Vestidos">Vestidos</button>
+      <button class="cat-chip" data-filter="Blusas">Blusas</button>
+      <button class="cat-chip" data-filter="Calças">Calças</button>
+      <button class="cat-chip" data-filter="Saias">Saias</button>
+      <button class="cat-chip" data-filter="Conjuntos">Conjuntos</button>
+      <button class="cat-chip" data-filter="Acessórios">Acessórios</button>
+    </div>
+    <div class="grid-products" id="product-grid"></div>
+  </div>
+</section>
+
+<section class="alt" id="como-comprar">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Passo a passo</span>
+        <h2>Como comprar</h2>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <h3>Escolha seus produtos</h3>
+        <p>Navegue pelo catálogo e selecione tamanho e cor de cada peça.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <h3>Monte seu carrinho</h3>
+        <p>Adicione quantas peças quiser — o carrinho fica salvo enquanto você navega.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <h3>Envie pelo WhatsApp</h3>
+        <p>Um clique gera a mensagem com o pedido completo para a Paula confirmar tudo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="loja">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Visite ou siga</span>
+        <h2>Loja física &amp; Instagram</h2>
+      </div>
+    </div>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>Loja física</h3>
+        <p>Rua Pará, 596 — Jardim Guarujá</p>
+        <p>São Joaquim da Barra/SP (próximo às lagoas)</p>
+        <dl class="hours">
+          <div><dt>Seg – Sex</dt><dd>a confirmar com a Paula</dd></div>
+          <div><dt>Sáb</dt><dd>a confirmar com a Paula</dd></div>
+        </dl>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Rua+Par%C3%A1+596+Jardim+Guaruj%C3%A1+S%C3%A3o+Joaquim+da+Barra+SP" target="_blank" rel="noopener">Ver no mapa →</a>
+      </div>
+      <div class="info-card">
+        <h3>@paulalourenco_store</h3>
+        <p>Lançamentos, promoções e bastidores da loja saem primeiro por lá.</p>
+        <div class="grid-products" style="grid-template-columns:repeat(3,1fr); gap:.6rem; margin-top:1rem;">
+          <img src="images/blusa-tranca-manga.jpg" alt="Blusa Trança de Manga" style="aspect-ratio:1/1; object-fit:cover; border-radius:.6rem;">
+          <img src="images/vestido-boho-bordado.jpg" alt="Vestido Boho Bordado" style="aspect-ratio:1/1; object-fit:cover; border-radius:.6rem;">
+          <img src="images/vestido-midi-renda-ceu-detalhe.jpg" alt="Vestido Midi Renda Céu" style="aspect-ratio:1/1; object-fit:cover; border-radius:.6rem;">
+        </div>
+        <a class="btn btn-ghost" href="https://www.instagram.com/paulalourenco_store/" target="_blank" rel="noopener" style="margin-top:1rem;">Seguir no Instagram →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="duvidas">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Antes de comprar</span>
+        <h2>Perguntas frequentes</h2>
+      </div>
+    </div>
+    <details class="faq-item" open>
+      <summary>Como funciona o pagamento?</summary>
+      <p>O pagamento é combinado diretamente com a Paula pelo WhatsApp, depois que você envia o carrinho. Formas aceitas: Pix, dinheiro, cartão de débito ou crédito (a confirmar na conversa).</p>
+    </details>
+    <details class="faq-item">
+      <summary>Vocês têm frete?</summary>
+      <p>O valor e o prazo de entrega são combinados no WhatsApp após a confirmação do pedido — também é possível retirar na loja física.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Posso trocar um produto?</summary>
+      <p>Sim. Trocas e devoluções são combinadas caso a caso diretamente com a Paula pelo WhatsApp — fale com a loja em até 7 dias após o recebimento.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Os preços do site são finais?</summary>
+      <p>Este site é um modelo de demonstração: os preços mostrados são exemplos. A Paula confirma o valor final, o estoque disponível e a entrega assim que você envia o pedido pelo WhatsApp.</p>
+    </details>
+  </div>
+</section>
+
+<section id="privacidade">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Transparência</span>
+        <h2>Política de privacidade</h2>
+      </div>
+    </div>
+    <p class="policy-mini">Este site não possui login, cadastro ou coleta de dados de navegação. As únicas informações compartilhadas são as que você mesma digita ao enviar seu pedido pelo WhatsApp — usadas somente para atendimento e confirmação da compra pela Paula Lourenço Store.</p>
+  </div>
+</section>
+
+<footer id="contato">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:.6rem;">Paula Lourenço <em>Store</em></div>
+        <p style="color:var(--text-soft); font-size:.9rem; max-width:32ch;">Moda feminina em São Joaquim da Barra — peças escolhidas com carinho, atendimento de boutique.</p>
+      </div>
+      <div>
+        <h4>Loja</h4>
+        <ul>
+          <li><a href="#lancamentos">Lançamentos</a></li>
+          <li><a href="#como-comprar">Como comprar</a></li>
+          <li><a href="#duvidas">Trocas e devoluções</a></li>
+          <li><a href="#duvidas">Perguntas frequentes</a></li>
+          <li><a href="#privacidade">Política de privacidade</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="__WPP_LINK_GERAL__" target="_blank" rel="noopener">WhatsApp (16) 99107-3041</a></li>
+          <li><a href="https://www.instagram.com/paulalourenco_store/" target="_blank" rel="noopener">@paulalourenco_store</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Rua+Par%C3%A1+596+Jardim+Guaruj%C3%A1+S%C3%A3o+Joaquim+da+Barra+SP" target="_blank" rel="noopener">Rua Pará, 596 — Jardim Guarujá</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Paula Lourenço Store — site modelo para apresentação.</span>
+      <span>Feito com carinho para a Paula 💌</span>
+    </div>
+  </div>
+</footer>
+
+<a class="float-wpp" href="__WPP_LINK_GERAL__" target="_blank" rel="noopener">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.1 8.1 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1s-.6.8-.8 1c-.1.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.6-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4.1-.1 0-.3 0-.4s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.8c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3Z"/></svg>
+  Fale com a Paula
+</a>
+
+<div class="overlay" id="cart-overlay"></div>
+<aside class="drawer" id="cart-drawer" aria-label="Carrinho de compras">
+  <div class="drawer-head">
+    <h3>Seu carrinho</h3>
+    <button class="drawer-close" id="cart-close" aria-label="Fechar carrinho">×</button>
+  </div>
+  <div class="drawer-body" id="cart-body"></div>
+  <div class="drawer-foot" id="cart-foot" hidden>
+    <div class="subtotal-row"><span>Subtotal</span><span id="cart-subtotal">R$ 0,00</span></div>
+    <p class="drawer-note">O pagamento e a confirmação do pedido são feitos diretamente pelo WhatsApp. Depois do envio, a Paula confirma disponibilidade, prazo e forma de pagamento.</p>
+    <div class="drawer-actions">
+      <button class="btn btn-ghost" id="cart-continue">Continuar comprando</button>
+      <a class="btn btn-primary" id="cart-send" target="_blank" rel="noopener">Enviar pedido pelo WhatsApp</a>
+    </div>
+    <button class="btn-link-clear" id="cart-clear">Limpar carrinho</button>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="product-modal">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" aria-label="Fechar">×</button>
+    <div class="modal-media"><img id="modal-img" src="" alt=""></div>
+    <div class="modal-info">
+      <span class="eyebrow" id="modal-cat"></span>
+      <h3 id="modal-title"></h3>
+      <p class="desc" id="modal-desc"></p>
+      <div id="modal-size-wrap">
+        <span class="field-label">Tamanho</span>
+        <div class="option-row" id="modal-sizes"></div>
+      </div>
+      <div id="modal-color-wrap">
+        <span class="field-label">Cor</span>
+        <div class="option-row" id="modal-colors"></div>
+      </div>
+      <div>
+        <span class="field-label">Quantidade</span>
+        <div class="modal-qty">
+          <button class="qty-btn" id="modal-qty-minus">−</button>
+          <span class="qty-val" id="modal-qty-val">1</span>
+          <button class="qty-btn" id="modal-qty-plus">+</button>
+        </div>
+      </div>
+      <div class="modal-price" id="modal-price"></div>
+      <div class="modal-actions">
+        <button class="btn btn-primary" id="modal-add">Adicionar ao carrinho</button>
+        <a class="link-doubt" id="modal-doubt" target="_blank" rel="noopener">Tenho uma dúvida sobre este produto</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var STORE_PHONE = "5516991073041";
+  var STORE_NAME = "Paula";
+
+  var PRODUCTS = [
+    {
+      id: "blusa-tranca-manga",
+      nome: "Blusa Trança de Manga",
+      categoria: "Blusas",
+      preco: 79.90,
+      img: "images/blusa-tranca-manga.jpg",
+      imgs: ["images/blusa-tranca-manga.jpg"],
+      tamanhos: ["P","M","G","GG"],
+      cores: [
+        {nome:"Vermelho", hex:"#B4302F"},
+        {nome:"Café", hex:"#5B4230"},
+        {nome:"Preto", hex:"#1E1B1B"},
+        {nome:"Marinho", hex:"#232C4A"},
+        {nome:"Azul Serenity", hex:"#A9C3DD"},
+        {nome:"Off-white", hex:"#EFE7DC"},
+        {nome:"Amarelo Claro", hex:"#E8D9A4"},
+        {nome:"Marrom", hex:"#4A3221"}
+      ],
+      desc: "Blusa em tricô modal premium com trança na frente e detalhe listrado nas mangas. Modelagem confortável, cai bem em qualquer ocasião."
+    },
+    {
+      id: "vestido-boho-bordado",
+      nome: "Vestido Boho Bordado",
+      categoria: "Vestidos",
+      preco: 219.90,
+      img: "images/vestido-boho-bordado.jpg",
+      imgs: ["images/vestido-boho-bordado.jpg", "images/vestido-boho-bordado-detalhe.jpg"],
+      tamanhos: ["P","M","G"],
+      cores: [{nome:"Off-white", hex:"#EFE7DC"}],
+      desc: "Vestido longo em algodão leve com bordado inglês e barra em dupla camada. Amarração com borlas no decote — peça statement para dias quentes."
+    },
+    {
+      id: "vestido-midi-renda-ceu",
+      nome: "Vestido Midi Renda Céu",
+      categoria: "Vestidos",
+      preco: 189.90,
+      img: "images/vestido-midi-renda-ceu.jpg",
+      imgs: ["images/vestido-midi-renda-ceu.jpg", "images/vestido-midi-renda-ceu-detalhe.jpg"],
+      tamanhos: ["P","M","G"],
+      cores: [{nome:"Azul Serenity", hex:"#A9C3DD"}],
+      desc: "Vestido midi em renda com alças finas e caimento fluido, forro interno. Uma peça só — direto do nosso Instagram."
+    }
+  ];
+
+  function brl(v){ return "R$ " + v.toFixed(2).replace(".", ","); }
+  function waLink(phone, text){ return "https://wa.me/" + phone + "?text=" + encodeURIComponent(text); }
+
+  var WPP_GERAL = waLink(STORE_PHONE, "Olá, " + STORE_NAME + "! Vim pelo site e gostaria de saber mais sobre as peças da loja.");
+  document.querySelectorAll('[href="__WPP_LINK_GERAL__"]').forEach(function(el){ el.setAttribute("href", WPP_GERAL); });
+
+  /* ---------------- cart state ---------------- */
+  var CART_KEY = "plstore_cart_v1";
+  var cart = [];
+  try { var saved = JSON.parse(localStorage.getItem(CART_KEY) || "[]"); if (Array.isArray(saved)) cart = saved; } catch(e){}
+
+  function saveCart(){
+    try { localStorage.setItem(CART_KEY, JSON.stringify(cart)); } catch(e){}
+    renderCart();
+    renderBadge();
+  }
+
+  function addToCart(item){
+    var existing = cart.find(function(c){ return c.id===item.id && c.tamanho===item.tamanho && c.cor===item.cor; });
+    if (existing){ existing.qtd += item.qtd; } else { cart.push(item); }
+    saveCart();
+  }
+  function removeFromCart(idx){ cart.splice(idx,1); saveCart(); }
+  function changeQty(idx, delta){
+    cart[idx].qtd += delta;
+    if (cart[idx].qtd <= 0) cart.splice(idx,1);
+    saveCart();
+  }
+  function clearCart(){ cart = []; saveCart(); }
+
+  function cartSubtotal(){ return cart.reduce(function(s,c){ return s + c.preco*c.qtd; }, 0); }
+
+  function renderBadge(){
+    var count = cart.reduce(function(s,c){ return s + c.qtd; }, 0);
+    var el = document.getElementById("cart-count");
+    if (count > 0){ el.hidden = false; el.textContent = count; } else { el.hidden = true; }
+  }
+
+  function renderCart(){
+    var body = document.getElementById("cart-body");
+    var foot = document.getElementById("cart-foot");
+    body.innerHTML = "";
+    if (cart.length === 0){
+      body.innerHTML = '<div class="cart-empty">Seu carrinho está vazio.<br>Adicione peças do catálogo para montar seu pedido.</div>';
+      foot.hidden = true;
+      return;
+    }
+    foot.hidden = false;
+    cart.forEach(function(item, idx){
+      var row = document.createElement("div");
+      row.className = "cart-item";
+      row.innerHTML =
+        '<img src="'+item.img+'" alt="'+item.nome+'">' +
+        '<div>' +
+          '<h4>'+item.nome+'</h4>' +
+          '<p class="meta">'+[item.tamanho, item.cor].filter(Boolean).join(" · ")+'</p>' +
+          '<div class="qty-row">' +
+            '<button class="qty-btn" data-act="minus" data-idx="'+idx+'">−</button>' +
+            '<span class="qty-val">'+item.qtd+'</span>' +
+            '<button class="qty-btn" data-act="plus" data-idx="'+idx+'">+</button>' +
+          '</div>' +
+        '</div>' +
+        '<div class="item-right">' +
+          '<span class="item-price">'+brl(item.preco*item.qtd)+'</span>' +
+          '<button class="remove-btn" data-act="remove" data-idx="'+idx+'">remover</button>' +
+        '</div>';
+      body.appendChild(row);
+    });
+    document.getElementById("cart-subtotal").textContent = brl(cartSubtotal());
+
+    var pageUrl = (typeof location !== "undefined" && location.href) ? location.href.split("#")[0] : "";
+    var lines = ["Olá, "+STORE_NAME+"! Gostaria de fazer um pedido:", ""];
+    cart.forEach(function(item, i){
+      lines.push((i+1)+". "+item.nome);
+      if (item.tamanho) lines.push("Tamanho: "+item.tamanho);
+      if (item.cor) lines.push("Cor: "+item.cor);
+      lines.push("Quantidade: "+item.qtd);
+      lines.push("Valor: "+brl(item.preco));
+      if (pageUrl) lines.push("Link: "+pageUrl+"#"+item.id);
+      lines.push("");
+    });
+    lines.push("Subtotal: "+brl(cartSubtotal()));
+    lines.push("");
+    lines.push("Aguardo a confirmação do estoque e as informações para pagamento e entrega.");
+    document.getElementById("cart-send").setAttribute("href", waLink(STORE_PHONE, lines.join("\n")));
+  }
+
+  document.getElementById("cart-body").addEventListener("click", function(e){
+    var btn = e.target.closest("button[data-act]");
+    if (!btn) return;
+    var idx = parseInt(btn.getAttribute("data-idx"), 10);
+    var act = btn.getAttribute("data-act");
+    if (act === "plus") changeQty(idx, 1);
+    if (act === "minus") changeQty(idx, -1);
+    if (act === "remove") removeFromCart(idx);
+  });
+  document.getElementById("cart-clear").addEventListener("click", clearCart);
+
+  /* ---------------- drawer open/close ---------------- */
+  var overlay = document.getElementById("cart-overlay");
+  var drawer = document.getElementById("cart-drawer");
+  function openDrawer(){ overlay.classList.add("open"); drawer.classList.add("open"); }
+  function closeDrawer(){ overlay.classList.remove("open"); drawer.classList.remove("open"); }
+  document.getElementById("cart-toggle").addEventListener("click", openDrawer);
+  document.getElementById("cart-close").addEventListener("click", closeDrawer);
+  document.getElementById("cart-continue").addEventListener("click", closeDrawer);
+  overlay.addEventListener("click", closeDrawer);
+
+  /* ---------------- product grid + filter ---------------- */
+  var grid = document.getElementById("product-grid");
+  var currentFilter = "all";
+
+  function renderGrid(){
+    grid.innerHTML = "";
+    var list = PRODUCTS.filter(function(p){ return currentFilter==="all" || p.categoria===currentFilter; });
+    if (list.length === 0){
+      grid.innerHTML = '<div class="empty-cat">Ainda não temos peças cadastradas nessa categoria neste modelo — a Paula pode enviar fotos para completar o catálogo.</div>';
+      return;
+    }
+    list.forEach(function(p){
+      var card = document.createElement("article");
+      card.className = "card";
+      card.id = p.id;
+      card.innerHTML =
+        '<div class="card-media"><span class="tag-new">Lançamento</span><img src="'+p.img+'" alt="'+p.nome+'"></div>' +
+        '<div class="card-body">' +
+          '<span class="card-cat">'+p.categoria+'</span>' +
+          '<h3>'+p.nome+'</h3>' +
+          '<div class="swatches">'+p.cores.map(function(c){ return '<span class="swatch" style="background:'+c.hex+'" title="'+c.nome+'"></span>'; }).join("")+'</div>' +
+          '<div class="price-row"><span class="price">'+brl(p.preco)+'<span class="price-note">valor de exemplo</span></span></div>' +
+          '<button class="card-cta" data-open="'+p.id+'">Ver detalhes</button>' +
+        '</div>';
+      grid.appendChild(card);
+    });
+  }
+
+  document.getElementById("cat-rail").addEventListener("click", function(e){
+    var chip = e.target.closest(".cat-chip");
+    if (!chip) return;
+    currentFilter = chip.getAttribute("data-filter");
+    document.querySelectorAll(".cat-chip").forEach(function(c){ c.classList.toggle("active", c===chip); });
+    renderGrid();
+  });
+
+  document.querySelectorAll('nav.primary a[data-filter]').forEach(function(a){
+    a.addEventListener("click", function(){
+      var f = a.getAttribute("data-filter");
+      currentFilter = f;
+      document.querySelectorAll(".cat-chip").forEach(function(c){ c.classList.toggle("active", c.getAttribute("data-filter")===f); });
+      renderGrid();
+    });
+  });
+
+  /* ---------------- product modal ---------------- */
+  var modalOverlay = document.getElementById("product-modal");
+  var activeProduct = null;
+  var modalState = { tamanho:null, cor:null, qtd:1 };
+
+  function openModal(id){
+    activeProduct = PRODUCTS.find(function(p){ return p.id===id; });
+    if (!activeProduct) return;
+    modalState = { tamanho: activeProduct.tamanhos[0], cor: activeProduct.cores[0].nome, qtd: 1 };
+
+    document.getElementById("modal-img").src = activeProduct.img;
+    document.getElementById("modal-img").alt = activeProduct.nome;
+    document.getElementById("modal-cat").textContent = activeProduct.categoria;
+    document.getElementById("modal-title").textContent = activeProduct.nome;
+    document.getElementById("modal-desc").textContent = activeProduct.desc;
+    document.getElementById("modal-price").textContent = brl(activeProduct.preco) + " · valor de exemplo";
+    document.getElementById("modal-qty-val").textContent = "1";
+
+    var sizesWrap = document.getElementById("modal-sizes");
+    sizesWrap.innerHTML = activeProduct.tamanhos.map(function(t){
+      return '<button class="opt-btn'+(t===modalState.tamanho?" selected":"")+'" data-size="'+t+'">'+t+'</button>';
+    }).join("");
+
+    var colorsWrap = document.getElementById("modal-colors");
+    colorsWrap.innerHTML = activeProduct.cores.map(function(c){
+      return '<button class="opt-swatch'+(c.nome===modalState.cor?" selected":"")+'" style="background:'+c.hex+'" data-color="'+c.nome+'" title="'+c.nome+'"></button>';
+    }).join("");
+
+    document.getElementById("modal-doubt").setAttribute("href", waLink(STORE_PHONE, "Olá, "+STORE_NAME+"! Tenho uma dúvida sobre o produto \""+activeProduct.nome+"\"."));
+
+    modalOverlay.classList.add("open");
+  }
+  function closeModal(){ modalOverlay.classList.remove("open"); }
+
+  grid.addEventListener("click", function(e){
+    var btn = e.target.closest("[data-open]");
+    if (!btn) return;
+    openModal(btn.getAttribute("data-open"));
+  });
+  document.getElementById("modal-close").addEventListener("click", closeModal);
+  modalOverlay.addEventListener("click", function(e){ if (e.target === modalOverlay) closeModal(); });
+
+  document.getElementById("modal-sizes").addEventListener("click", function(e){
+    var b = e.target.closest("[data-size]");
+    if (!b) return;
+    modalState.tamanho = b.getAttribute("data-size");
+    document.querySelectorAll("#modal-sizes .opt-btn").forEach(function(x){ x.classList.toggle("selected", x===b); });
+  });
+  document.getElementById("modal-colors").addEventListener("click", function(e){
+    var b = e.target.closest("[data-color]");
+    if (!b) return;
+    modalState.cor = b.getAttribute("data-color");
+    document.querySelectorAll("#modal-colors .opt-swatch").forEach(function(x){ x.classList.toggle("selected", x===b); });
+  });
+  document.getElementById("modal-qty-plus").addEventListener("click", function(){
+    modalState.qtd++; document.getElementById("modal-qty-val").textContent = modalState.qtd;
+  });
+  document.getElementById("modal-qty-minus").addEventListener("click", function(){
+    modalState.qtd = Math.max(1, modalState.qtd-1); document.getElementById("modal-qty-val").textContent = modalState.qtd;
+  });
+  document.getElementById("modal-add").addEventListener("click", function(){
+    if (!activeProduct) return;
+    addToCart({
+      id: activeProduct.id,
+      nome: activeProduct.nome,
+      preco: activeProduct.preco,
+      img: activeProduct.img,
+      tamanho: modalState.tamanho,
+      cor: modalState.cor,
+      qtd: modalState.qtd
+    });
+    closeModal();
+    openDrawer();
+  });
+
+  /* ---------------- init ---------------- */
+  renderGrid();
+  renderCart();
+  renderBadge();
+})();
+</script>
+
+</body>
+</html>
