@@ -1,0 +1,1447 @@
+Quero que você atue como UX/UI Designer sênior, especialista em e-commerce de moda, CRO, desenvolvimento front-end e experiência mobile.
+
+Crie um E-COMMERCE COMPLETO, moderno, responsivo e profissional para a marca:
+
+PAULA LOURENÇO STORE
+
+IMPORTANTE:
+Estou fornecendo junto deste prompt:
+1. A logo da Paula Lourenço Store.
+2. Uma imagem com o contato de WhatsApp da loja.
+
+Use esses arquivos como referência real da identidade visual.
+
+==================================================
+1. OBJETIVO DO PROJETO
+==================================================
+
+Criar uma loja virtual de roupas feminina que:
+
+- apresente os produtos de maneira sofisticada;
+- facilite a navegação pelo celular;
+- permita adicionar vários produtos ao carrinho;
+- permita selecionar tamanho, cor e quantidade;
+- calcule o subtotal do pedido;
+- NÃO tenha checkout tradicional com cartão;
+- finalize o pedido diretamente pelo WhatsApp da loja.
+
+WhatsApp oficial:
+
++55 16 99107-3041
+
+Ao clicar em “Finalizar pedido pelo WhatsApp”, abrir uma conversa com esse número contendo automaticamente todas as informações do carrinho.
+
+O site deve ter aparência de uma marca de moda real.
+
+NÃO quero:
+- site genérico de template;
+- aparência de dropshipping;
+- visual infantil;
+- rosa exagerado;
+- excesso de elementos;
+- gradientes chamativos;
+- ícones gigantes;
+- excesso de bordas arredondadas;
+- aparência de projeto feito por IA.
+
+Quero um resultado elegante, comercial, feminino e refinado.
+
+==================================================
+2. IDENTIDADE VISUAL
+==================================================
+
+A identidade deve ser extraída da logo fornecida.
+
+A marca possui uma estética baseada em:
+
+- rosa blush muito claro;
+- vinho / bordô;
+- rosa queimado;
+- tons suaves;
+- branco/off-white.
+
+Use como ponto de partida aproximadamente:
+
+FUNDO PRINCIPAL:
+#F8E3DE
+
+VINHO PRINCIPAL:
+#994A50
+
+ROSA QUEIMADO:
+#D9B0AA
+
+OFF-WHITE:
+#FFF9F7
+
+TEXTO ESCURO:
+#3E292B
+
+CINZA QUENTE:
+#756767
+
+Esses valores podem ser refinados visualmente para combinar melhor com a logo enviada.
+
+O VINHO deve ser usado estrategicamente em:
+- CTAs;
+- preços;
+- elementos ativos;
+- títulos de destaque;
+- pequenos detalhes;
+- hover;
+- indicadores;
+- ícones selecionados.
+
+O ROSA CLARO deve funcionar principalmente como:
+- fundo;
+- áreas editoriais;
+- blocos de coleção;
+- elementos delicados.
+
+Evitar deixar tudo rosa.
+
+A experiência deve transmitir:
+
+ELEGÂNCIA
+FEMINILIDADE
+DELICADEZA
+MODA
+CONFIANÇA
+EXCLUSIVIDADE
+PROXIMIDADE
+
+==================================================
+3. TIPOGRAFIA
+==================================================
+
+Quero uma combinação de duas famílias tipográficas.
+
+Para títulos, banners e elementos editoriais:
+utilizar uma fonte serifada elegante, inspirada na tipografia da logo.
+
+Sugestões:
+Cormorant Garamond
+DM Serif Display
+Bodoni Moda
+Playfair Display
+
+Escolha a que harmonizar melhor com a logo.
+
+Para:
+- menu;
+- preços;
+- descrição;
+- botões;
+- filtros;
+- informações;
+
+usar uma sans-serif limpa e moderna.
+
+Sugestões:
+Inter
+Manrope
+DM Sans
+
+Não utilizar muitas fontes diferentes.
+
+==================================================
+4. ESTRUTURA GLOBAL
+==================================================
+
+Criar:
+
+HOME
+
+CATÁLOGO / TODOS OS PRODUTOS
+
+CATEGORIAS
+
+PÁGINA INDIVIDUAL DE PRODUTO
+
+FAVORITOS
+
+CARRINHO
+
+SOBRE A MARCA
+
+POLÍTICA DE TROCAS
+
+CONTATO
+
+Também deve existir:
+
+busca de produtos;
+filtros;
+menu mobile;
+favoritos;
+carrinho persistente;
+WhatsApp;
+Instagram.
+
+==================================================
+5. BARRA SUPERIOR
+==================================================
+
+Criar uma barra fina acima do menu.
+
+Ela poderá alternar mensagens como:
+
+“Envio para todo o Brasil”
+
+“Novidades toda semana”
+
+“Compre online e finalize pelo WhatsApp”
+
+“Troca fácil”
+
+Visual extremamente discreto.
+
+==================================================
+6. HEADER
+==================================================
+
+Desktop:
+
+Logo à esquerda.
+
+Menu central:
+
+NOVIDADES
+ROUPAS
+VESTIDOS
+CONJUNTOS
+BLUSAS
+CALÇAS
+SHORTS
+ACESSÓRIOS
+PROMOÇÕES
+
+À direita:
+
+BUSCA
+FAVORITOS
+CARRINHO
+
+O carrinho deve mostrar quantidade de produtos.
+
+Exemplo:
+
+Sacola (3)
+
+O header deve ficar elegante e relativamente fino.
+
+Pode utilizar comportamento sticky ao rolar a página.
+
+==================================================
+7. MOBILE
+==================================================
+
+PRIORIDADE ABSOLUTA PARA MOBILE.
+
+A maior parte das pessoas acessará pelo Instagram e WhatsApp.
+
+No celular:
+
+menu hambúrguer;
+logo centralizada;
+busca;
+carrinho;
+navegação limpa;
+botões grandes o suficiente para toque;
+filtros em drawer/modal;
+imagens grandes;
+checkout extremamente simples.
+
+Não simplesmente reduzir o desktop.
+
+Criar uma experiência mobile pensada separadamente.
+
+==================================================
+8. HOME — PRIMEIRA DOBRA
+==================================================
+
+Criar um HERO editorial sofisticado.
+
+Imagem principal de campanha ocupando bastante espaço.
+
+Não colocar muitos textos.
+
+Exemplo:
+
+NOVA COLEÇÃO
+
+Peças escolhidas para acompanhar você em todos os momentos.
+
+[ CONHECER A COLEÇÃO ]
+
+Ou:
+
+SEU ESTILO.
+DO SEU JEITO.
+
+[ COMPRAR AGORA ]
+
+O conteúdo deverá poder ser alterado facilmente.
+
+No desktop, pode utilizar uma composição editorial.
+
+No mobile, imagem vertical otimizada.
+
+Não utilizar carrossel automático pesado.
+
+==================================================
+9. CATEGORIAS VISUAIS
+==================================================
+
+Depois do banner principal:
+
+Título:
+
+ESCOLHA SEU ESTILO
+
+Apresentar categorias através de fotografias.
+
+Exemplo:
+
+VESTIDOS
+CONJUNTOS
+BLUSAS
+CALÇAS
+SHORTS
+ACESSÓRIOS
+
+As imagens precisam ser protagonistas.
+
+No desktop:
+grid elegante.
+
+No mobile:
+scroll horizontal suave ou grid 2 colunas.
+
+==================================================
+10. MAIS VENDIDOS
+==================================================
+
+Título:
+
+OS QUERIDINHOS DA PAULA LOURENÇO
+
+Mostrar aproximadamente 4 produtos no desktop.
+
+No mobile:
+aproximadamente 2 produtos por linha.
+
+Cards limpos.
+
+Cada produto deverá possuir:
+
+foto;
+segunda foto no hover;
+nome;
+preço;
+preço promocional quando houver;
+parcelamento opcional;
+cores disponíveis;
+badge quando necessário;
+favoritar.
+
+Badges permitidos:
+
+NOVO
+MAIS VENDIDO
+ÚLTIMAS UNIDADES
+SALE
+
+Não colocar badge em todo produto.
+
+==================================================
+11. CARD DO PRODUTO
+==================================================
+
+Design minimalista.
+
+Prioridade máxima para fotografia.
+
+Exemplo:
+
+[ FOTO ]
+
+Vestido Midi Aurora
+
+R$ 189,90
+
+ou 3x de R$ 63,30
+
+○ ○ ○
+cores disponíveis
+
+♡ Favoritar
+
+Não colocar um botão enorme em cada card.
+
+Ao clicar na fotografia ou nome:
+abrir produto.
+
+Pode existir “Adicionar rápido” aparecendo discretamente no hover no desktop.
+
+==================================================
+12. BANNER EDITORIAL
+==================================================
+
+Depois dos mais vendidos, criar uma sessão editorial.
+
+Grande fotografia de moda.
+
+Texto:
+
+NOVA COLEÇÃO
+
+Uma curadoria para mulheres que gostam de vestir personalidade.
+
+[ VER COLEÇÃO ]
+
+Esse bloco deve parecer uma campanha de moda e não um banner publicitário genérico.
+
+==================================================
+13. NOVIDADES
+==================================================
+
+Título:
+
+ACABARAM DE CHEGAR
+
+Exibir produtos recentemente adicionados.
+
+Adicionar botão:
+
+[ VER TODAS AS NOVIDADES ]
+
+==================================================
+14. COMPRE POR OCASIÃO
+==================================================
+
+Criar uma sessão diferente das categorias tradicionais.
+
+Exemplo:
+
+PARA O DIA
+PARA A NOITE
+PARA TRABALHAR
+PARA CELEBRAR
+
+Usar imagens editoriais.
+
+Isso ajuda a cliente a comprar pelo contexto e não apenas pelo tipo de peça.
+
+==================================================
+15. BENEFÍCIOS
+==================================================
+
+Criar uma faixa elegante contendo:
+
+ENVIO PARA TODO BRASIL
+
+COMPRA FINALIZADA PELO WHATSAPP
+
+TROCA FÁCIL
+
+ATENDIMENTO PERSONALIZADO
+
+Usar ícones lineares minimalistas.
+
+Não transformar esse bloco em quatro cartões gigantes.
+
+==================================================
+16. PROVA SOCIAL
+==================================================
+
+Criar seção:
+
+QUEM COMPRA, AMA ♡
+
+Preparar estrutura para avaliações reais.
+
+Exemplo:
+
+★★★★★
+
+“A peça ficou maravilhosa e o atendimento foi perfeito.”
+
+Nome da cliente
+
+Também permitir futuramente inserir foto da cliente utilizando a peça.
+
+Não inventar avaliações como se fossem reais.
+
+Utilizar conteúdo placeholder claramente identificado até receber avaliações verdadeiras.
+
+==================================================
+17. INSTAGRAM
+==================================================
+
+Criar seção:
+
+SIGA @PAULALOURENCOSTORE
+
+Grid visual de posts.
+
+Objetivo:
+mostrar estilo de vida, peças, clientes e coleção.
+
+Adicionar:
+
+[ SEGUIR NO INSTAGRAM ]
+
+Deixar URL configurável.
+
+==================================================
+18. NEWSLETTER / LISTA VIP
+==================================================
+
+Criar uma área elegante:
+
+ENTRE PARA A LISTA VIP
+
+Receba novidades, lançamentos e condições especiais antes de todo mundo.
+
+Campo:
+
+Seu WhatsApp ou e-mail
+
+[ QUERO PARTICIPAR ]
+
+Não inventar integração se ela ainda não existir.
+
+Deixar estrutura preparada para integração futura.
+
+==================================================
+19. PÁGINA DE CATEGORIA
+==================================================
+
+Exemplo:
+
+VESTIDOS
+
+Mostrar:
+
+breadcrumb;
+nome da categoria;
+quantidade de produtos;
+ordenação;
+filtros;
+grid de produtos.
+
+Filtros:
+
+TAMANHO
+
+PP
+P
+M
+G
+GG
+
+COR
+
+PREÇO
+
+TIPO
+
+DISPONIBILIDADE
+
+ORDENAÇÃO:
+
+Mais vendidos
+Novidades
+Menor preço
+Maior preço
+
+No mobile:
+filtros devem abrir em drawer.
+
+==================================================
+20. BUSCA
+==================================================
+
+Criar uma busca funcional.
+
+Ao clicar na lupa:
+
+abrir um campo elegante.
+
+Pesquisar por:
+
+nome;
+categoria;
+cor;
+descrição.
+
+Mostrar resultados dinamicamente.
+
+Exemplo:
+
+Buscar por vestido, conjunto, calça...
+
+==================================================
+21. PÁGINA DO PRODUTO
+==================================================
+
+Essa é uma das páginas mais importantes.
+
+Desktop:
+
+galeria de imagens à esquerda;
+informações à direita.
+
+Mobile:
+
+imagens primeiro;
+informações logo abaixo.
+
+GALERIA:
+
+Permitir:
+
+foto frontal;
+costas;
+lateral;
+detalhe do tecido;
+modelo usando;
+vídeo futuramente.
+
+INFORMAÇÕES:
+
+Nome
+
+Exemplo:
+
+VESTIDO MIDI AURORA
+
+Preço:
+
+R$ 199,90
+
+ou parcelamento, caso a loja queira exibir.
+
+Se houver promoção:
+
+R$ 239,90
+R$ 199,90
+
+Mostrar desconto de forma elegante.
+
+==================================================
+22. ESCOLHA DE COR
+==================================================
+
+Exemplo:
+
+COR: VINHO
+
+● ● ●
+
+A cor escolhida deve ficar claramente marcada.
+
+Quando existir fotografia correspondente à cor, atualizar galeria.
+
+==================================================
+23. ESCOLHA DE TAMANHO
+==================================================
+
+Título:
+
+ESCOLHA O TAMANHO
+
+PP
+P
+M
+G
+GG
+
+Tamanho indisponível:
+visualmente desabilitado.
+
+Adicionar:
+
+GUIA DE MEDIDAS
+
+Abrir modal com:
+
+busto;
+cintura;
+quadril;
+comprimento;
+
+de forma fácil de entender.
+
+==================================================
+24. QUANTIDADE
+==================================================
+
+Permitir:
+
+−  1  +
+
+==================================================
+25. CTA PRODUTO
+==================================================
+
+CTA principal:
+
+ADICIONAR À SACOLA
+
+Usar cor vinho da marca.
+
+Logo abaixo pode existir:
+
+♡ ADICIONAR AOS FAVORITOS
+
+Não quero botão verde do WhatsApp dominando a página do produto.
+
+O verde tradicional do WhatsApp deve aparecer somente quando realmente necessário.
+
+A identidade principal continua sendo Paula Lourenço Store.
+
+==================================================
+26. INFORMAÇÕES DA PEÇA
+==================================================
+
+Criar acordeões:
+
+DETALHES
+
+COMPOSIÇÃO
+
+MEDIDAS
+
+CUIDADOS
+
+TROCAS E DEVOLUÇÕES
+
+Exemplo de estrutura:
+
+Sobre a peça
+
+Vestido midi com modelagem...
+
+Detalhes:
+• tecido;
+• fechamento;
+• forro;
+• bojo;
+• elasticidade;
+• transparência.
+
+Modelo veste:
+P
+
+Medidas da modelo:
+Altura
+Busto
+Cintura
+Quadril
+
+Todas essas informações devem ser administráveis pelo cadastro do produto.
+
+==================================================
+27. PRODUTOS RELACIONADOS
+==================================================
+
+Criar:
+
+VOCÊ TAMBÉM PODE GOSTAR
+
+Mostrar peças relacionadas.
+
+==================================================
+28. COMPLETE O LOOK
+==================================================
+
+Adicionar uma seção:
+
+COMPLETE O LOOK
+
+Exemplo:
+
+Blusa
++
+Calça
++
+Bolsa
+
+Permitir adicionar os itens desejados ao carrinho.
+
+Essa funcionalidade deverá ajudar no aumento do ticket médio.
+
+==================================================
+29. CARRINHO
+==================================================
+
+Criar carrinho elegante.
+
+Pode abrir inicialmente como drawer lateral.
+
+Mostrar:
+
+foto;
+nome;
+cor;
+tamanho;
+quantidade;
+valor;
+subtotal;
+remover produto.
+
+Exemplo:
+
+Vestido Midi Aurora
+Cor: Vinho
+Tamanho: M
+Qtd: 1
+
+R$ 189,90
+
+SUBTOTAL
+
+R$ 189,90
+
+Botão:
+
+FINALIZAR PEDIDO PELO WHATSAPP
+
+Também permitir:
+
+CONTINUAR COMPRANDO
+
+==================================================
+30. CHECKOUT PELO WHATSAPP
+==================================================
+
+ESSA PARTE É OBRIGATÓRIA E PRECISA FUNCIONAR.
+
+WhatsApp:
+
+5516991073041
+
+Quando a cliente clicar:
+
+FINALIZAR PEDIDO PELO WHATSAPP
+
+Gerar automaticamente uma mensagem.
+
+Exemplo:
+
+Olá! Quero finalizar meu pedido na Paula Lourenço Store ♡
+
+Meu pedido:
+
+1. Vestido Midi Aurora
+Cor: Vinho
+Tamanho: M
+Quantidade: 1
+Valor: R$ 189,90
+
+2. Blusa Sofia
+Cor: Off-white
+Tamanho: P
+Quantidade: 1
+Valor: R$ 99,90
+
+Subtotal:
+R$ 289,80
+
+Nome:
+________________
+
+CEP:
+________________
+
+Forma de entrega:
+A combinar
+
+Gostaria de finalizar esse pedido. 🤍
+
+Criar a mensagem dinamicamente de acordo com os produtos presentes no carrinho.
+
+Codificar corretamente a mensagem para URL.
+
+Abrir utilizando:
+
+https://wa.me/5516991073041?text=MENSAGEM
+
+O botão deve funcionar tanto no desktop quanto no mobile.
+
+==================================================
+31. DADOS ANTES DO WHATSAPP
+==================================================
+
+Antes de abrir o WhatsApp, podemos solicitar em um pequeno formulário:
+
+NOME
+CEP
+CIDADE
+ESTADO
+
+Esses campos NÃO precisam tornar a compra cansativa.
+
+Não pedir:
+CPF
+endereço completo
+data de nascimento
+cadastro de senha
+
+A ideia é reduzir atrito.
+
+O restante do atendimento será feito no WhatsApp.
+
+==================================================
+32. BOTÃO FLUTUANTE DO WHATSAPP
+==================================================
+
+Adicionar botão flutuante discreto do WhatsApp.
+
+Função:
+
+Falar com a loja.
+
+Mensagem padrão:
+
+Olá! Vim pelo site da Paula Lourenço Store e gostaria de tirar uma dúvida.
+
+Não confundir esse botão com:
+
+FINALIZAR PEDIDO.
+
+São funcionalidades diferentes.
+
+==================================================
+33. FAVORITOS
+==================================================
+
+Criar favoritos utilizando localStorage.
+
+A cliente consegue clicar no coração.
+
+Criar página:
+
+MEUS FAVORITOS
+
+Os produtos devem continuar salvos mesmo caso a página seja atualizada.
+
+==================================================
+34. CARRINHO PERSISTENTE
+==================================================
+
+Salvar carrinho em localStorage.
+
+Se a cliente:
+
+adicionar produtos;
+fechar o navegador;
+voltar depois;
+
+o carrinho deverá permanecer.
+
+==================================================
+35. SOBRE A MARCA
+==================================================
+
+Criar página institucional:
+
+SOBRE A PAULA LOURENÇO STORE
+
+Não inventar uma história para a marca.
+
+Criar estrutura para inserir posteriormente:
+
+história;
+propósito;
+foto da fundadora;
+valores;
+filosofia;
+atendimento.
+
+Enquanto essas informações não forem fornecidas, usar placeholders editáveis.
+
+==================================================
+36. POLÍTICA DE TROCA
+==================================================
+
+Criar página estruturada para:
+
+troca;
+devolução;
+prazo;
+produtos com defeito;
+contato.
+
+Não inventar regras jurídicas.
+
+Utilizar campos editáveis até recebermos a política oficial da loja.
+
+==================================================
+37. RODAPÉ
+==================================================
+
+Criar rodapé elegante usando vinho ou off-white.
+
+PAULA LOURENÇO STORE
+
+Institucional:
+Sobre nós
+Contato
+
+Atendimento:
+WhatsApp
+Trocas e devoluções
+Guia de medidas
+
+Políticas:
+Privacidade
+Termos
+
+Redes:
+Instagram
+
+Contato:
++55 16 99107-3041
+
+Também preparar espaço para:
+
+CNPJ
+razão social
+endereço
+
+quando essas informações forem fornecidas.
+
+==================================================
+38. FOTOGRAFIAS
+==================================================
+
+O site deve depender fortemente de fotografias de alta qualidade.
+
+Para imagens de roupas:
+
+não cortar cabeças aleatoriamente;
+não distorcer corpo;
+não distorcer produto;
+não aplicar efeitos artificiais;
+não usar fundos exagerados.
+
+As fotos precisam ter tratamento consistente.
+
+Cards preferencialmente em proporções semelhantes.
+
+Utilizar object-fit: cover quando adequado, mas nunca cortar partes importantes da peça.
+
+==================================================
+39. MICROINTERAÇÕES
+==================================================
+
+Adicionar animações discretas:
+
+fade;
+slide suave;
+hover de imagem;
+substituição pela segunda foto;
+menu abrindo;
+carrinho lateral;
+favorito;
+feedback ao adicionar produto.
+
+Nada exagerado.
+
+Tempo aproximado:
+200ms a 400ms.
+
+Não utilizar efeitos 3D ou animações chamativas.
+
+==================================================
+40. EXPERIÊNCIA DE COMPRA
+==================================================
+
+O fluxo ideal é:
+
+ENTRO NO SITE
+
+↓
+
+VEJO A IDENTIDADE DA MARCA
+
+↓
+
+ENCONTRO UMA PEÇA
+
+↓
+
+CONSULTO FOTOS
+
+↓
+
+ESCOLHO COR
+
+↓
+
+ESCOLHO TAMANHO
+
+↓
+
+ADICIONO À SACOLA
+
+↓
+
+CONTINUO COMPRANDO
+
+↓
+
+ABRO O CARRINHO
+
+↓
+
+CONFIRMO O PEDIDO
+
+↓
+
+FINALIZO PELO WHATSAPP
+
+↓
+
+LOJA RECEBE PEDIDO ORGANIZADO
+
+==================================================
+41. DADOS DOS PRODUTOS
+==================================================
+
+Inicialmente criar uma estrutura de dados organizada.
+
+Exemplo:
+
+{
+ id,
+ slug,
+ nome,
+ categoria,
+ descricao,
+ preco,
+ precoAnterior,
+ promocao,
+ imagens,
+ cores,
+ tamanhos,
+ estoque,
+ composicao,
+ cuidados,
+ medidas,
+ destaque,
+ novidade,
+ maisVendido
+}
+
+Não espalhar os dados dos produtos diretamente pelo código.
+
+Centralizar para facilitar manutenção.
+
+==================================================
+42. PRODUTOS DE DEMONSTRAÇÃO
+==================================================
+
+Pode criar produtos TEMPORÁRIOS apenas para testar interface.
+
+Exemplo:
+
+Vestido Midi Aurora
+Conjunto Helena
+Blusa Sofia
+Calça Alfaiataria Luna
+Short Serena
+Vestido Maya
+
+Mas devem estar claramente estruturados como dados fictícios/de demonstração e ser fáceis de substituir pelos produtos reais.
+
+Não apresentar informações fictícias como dados oficiais da loja.
+
+==================================================
+43. RESPONSIVIDADE
+==================================================
+
+Testar pelo menos:
+
+375px
+390px
+430px
+768px
+1024px
+1280px
+1440px
+
+Não permitir:
+
+texto quebrando;
+produto cortado;
+scroll horizontal;
+botão fora da tela;
+logo deformada;
+carrinho estourando layout.
+
+==================================================
+44. PERFORMANCE
+==================================================
+
+Priorizar:
+
+imagens WebP/AVIF quando possível;
+lazy loading;
+componentes leves;
+não instalar bibliotecas desnecessárias;
+boa performance mobile;
+fontes otimizadas;
+carregamento progressivo.
+
+==================================================
+45. SEO
+==================================================
+
+Preparar:
+
+title;
+meta description;
+Open Graph;
+URLs amigáveis;
+alt nas imagens;
+estrutura semântica;
+Schema.org Product quando possível;
+breadcrumbs;
+sitemap;
+robots.
+
+Produtos:
+
+/produto/vestido-midi-aurora
+
+Categorias:
+
+/categoria/vestidos
+
+Não usar URLs incompreensíveis.
+
+==================================================
+46. TECNOLOGIA
+==================================================
+
+Se estiver usando Next.js:
+
+Next.js
+TypeScript
+Tailwind CSS
+
+Criar componentes reutilizáveis.
+
+Organização sugerida:
+
+components
+sections
+products
+cart
+layout
+data
+hooks
+utils
+
+Evitar um único arquivo gigantesco.
+
+Utilizar boas práticas.
+
+==================================================
+47. COMPONENTES
+==================================================
+
+Criar componentes como:
+
+Header
+AnnouncementBar
+MobileMenu
+Hero
+CategoryCard
+ProductCard
+ProductGrid
+ProductGallery
+SizeSelector
+ColorSelector
+QuantitySelector
+AddToCartButton
+WishlistButton
+CartDrawer
+CartItem
+WhatsAppCheckout
+BenefitsBar
+Testimonials
+InstagramSection
+Newsletter
+Footer
+SizeGuideModal
+FilterDrawer
+SearchOverlay
+
+==================================================
+48. ACESSIBILIDADE
+==================================================
+
+Garantir:
+
+contraste adequado;
+texto legível;
+botões acessíveis;
+aria-label;
+navegação por teclado;
+alt de imagem;
+focus states;
+áreas de toque adequadas.
+
+==================================================
+49. DIREÇÃO DE DESIGN
+==================================================
+
+Quero que você pense na seguinte mistura:
+
+boutique feminina brasileira
++
+editorial de moda
++
+e-commerce premium
++
+simplicidade de compra pelo WhatsApp
+
+O resultado NÃO deve parecer:
+
+Shopee;
+marketplace;
+site corporativo;
+landing page;
+template genérico de boutique.
+
+Precisa parecer:
+
+PAULA LOURENÇO STORE.
+
+==================================================
+50. REGRA DE OURO
+==================================================
+
+Sempre priorizar:
+
+PRODUTO > INTERFACE.
+
+As roupas são protagonistas.
+
+O design deve dar espaço para:
+fotografia;
+produto;
+marca;
+decisão de compra.
+
+==================================================
+51. IMPLEMENTAÇÃO
+==================================================
+
+Não quero somente um mockup.
+
+Quero o projeto FUNCIONAL.
+
+Implemente:
+
+navegação;
+menu;
+busca;
+filtros;
+produto;
+seleção de tamanho;
+seleção de cor;
+quantidade;
+favoritos;
+localStorage;
+carrinho;
+subtotal;
+remoção de item;
+alteração de quantidade;
+WhatsApp dinâmico;
+responsividade;
+estados vazios;
+feedback de ações.
+
+==================================================
+52. ESTADO VAZIO
+==================================================
+
+Exemplo carrinho:
+
+SUA SACOLA ESTÁ VAZIA
+
+Que tal encontrar uma peça para chamar de sua?
+
+[ VER NOVIDADES ]
+
+Favoritos:
+
+VOCÊ AINDA NÃO FAVORITOU NENHUMA PEÇA
+
+[ DESCOBRIR PRODUTOS ]
+
+==================================================
+53. DETALHES DE CONVERSÃO
+==================================================
+
+Implementar também:
+
+CTA sticky de “Adicionar à sacola” no mobile quando fizer sentido;
+
+indicador de produto adicionado;
+
+feedback visual sem redirecionamento desnecessário;
+
+mini carrinho;
+
+WhatsApp sempre identificando que o cliente veio do site;
+
+possibilidade de continuar comprando depois de adicionar um produto;
+
+não obrigar criação de conta;
+
+não criar etapas desnecessárias.
+
+==================================================
+54. ENTREGA
+==================================================
+
+Comece primeiro organizando:
+
+1. arquitetura das páginas;
+2. componentes;
+3. design system;
+4. estrutura dos dados;
+5. fluxo do carrinho;
+6. integração do WhatsApp.
+
+Depois implemente a interface.
+
+Use a LOGO REAL enviada no projeto.
+
+Não redesenhe ou altere a marca sem autorização.
+
+Não substitua a logo por texto genérico.
+
+Caso precise temporariamente indicar onde entra determinado material que ainda não possuo, use placeholders claros.
+
+Não invente informações sobre a Paula Lourenço Store.
+
+O resultado final deve estar pronto para depois substituirmos apenas:
+
+- fotos reais;
+- nomes das peças;
+- preços;
+- descrições;
+- estoque;
+- políticas;
+- Instagram;
+- CNPJ/endereço.
+
+Todo o restante da estrutura deve estar pronto e funcional.

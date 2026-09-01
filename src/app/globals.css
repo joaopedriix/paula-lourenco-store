@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Paula Lourenço Store — Design Tokens
+   Fonte: BRIEF-ORIGINAL.txt (seção 2 e 3) + conferência de cor
+   contra public/brand/logo-square.png (fundo ~#fde4df, traço
+   vinho ~#8b4b4f) — muito próximos aos hex sugeridos no briefing,
+   por isso usamos os valores oficiais do briefing como fonte
+   única de verdade da paleta.
+   ============================================================ */
+
+:root {
+  --color-bg: #f8e3de;       /* fundo blush */
+  --color-wine: #994a50;     /* vinho principal — CTA, preço, destaque */
+  --color-wine-dark: #7c3b40; /* hover/active do vinho */
+  --color-wine-soft: #a8626a; /* variação clara do vinho para textos secundários sobre bg claro */
+  --color-rose: #d9b0aa;     /* rosa queimado — áreas editoriais, fundos secundários */
+  --color-cream: #fff9f7;    /* off-white — superfícies, cards */
+  --color-ink: #3e292b;      /* texto escuro */
+  --color-taupe: #756767;    /* cinza quente — texto secundário */
+  --color-whatsapp: #25d366; /* apenas botão flutuante de dúvida */
+  --color-line: #e7cfc8;     /* linhas/bordas discretas sobre o blush */
+  --color-line-cream: #ece1dc; /* linhas/bordas discretas sobre off-white */
+
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  --ease-store: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-wine: var(--color-wine);
+  --color-wine-dark: var(--color-wine-dark);
+  --color-wine-soft: var(--color-wine-soft);
+  --color-rose: var(--color-rose);
+  --color-cream: var(--color-cream);
+  --color-ink: var(--color-ink);
+  --color-taupe: var(--color-taupe);
+  --color-whatsapp: var(--color-whatsapp);
+  --color-line: var(--color-line);
+  --color-line-cream: var(--color-line-cream);
+
+  --font-serif: var(--font-pl-serif);
+  --font-sans: var(--font-pl-sans);
+
+  --radius-xs: var(--radius-xs);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+
+  --breakpoint-xs: 375px;
+}
+
+* {
+  border-color: var(--color-line-cream);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4,
+.font-serif {
+  font-family: var(--font-serif);
+  letter-spacing: 0.01em;
+}
+
+::selection {
+  background: var(--color-rose);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-wine);
+  outline-offset: 2px;
+}
+
+/* Discreet, brand-appropriate scrollbar for horizontal scroll rows (mobile category strip) */
+.scrollbar-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes pl-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pl-slide-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pl-slide-in-right {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-pl-fade-in {
+  animation: pl-fade-in 300ms var(--ease-store) both;
+}
+
+.animate-pl-slide-up {
+  animation: pl-slide-up 320ms var(--ease-store) both;
+}
