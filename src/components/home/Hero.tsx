@@ -12,7 +12,7 @@ export function Hero() {
     <section className="relative">
       <div className="relative h-[76vh] min-h-[480px] w-full overflow-hidden bg-rose/25 sm:hidden">
         <Image
-          src="https://picsum.photos/seed/pl-hero-mobile/900/1400"
+          src="https://images.unsplash.com/photo-1685703206267-314ce44ca3c8?w=900&h=1400&fit=crop&crop=entropy&q=80&auto=format"
           alt="Campanha Paula Lourenço Store — nova coleção (imagem de demonstração)"
           fill
           priority
@@ -27,7 +27,7 @@ export function Hero() {
 
       <div className="relative hidden h-[84vh] min-h-[540px] max-h-[780px] w-full overflow-hidden bg-rose/25 sm:block">
         <Image
-          src="https://picsum.photos/seed/pl-hero-desktop/1800/1100"
+          src="https://images.unsplash.com/photo-1685703206267-314ce44ca3c8?w=1800&h=1100&fit=crop&crop=entropy&q=80&auto=format"
           alt="Campanha Paula Lourenço Store — nova coleção (imagem de demonstração)"
           fill
           priority

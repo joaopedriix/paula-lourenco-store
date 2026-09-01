@@ -5,8 +5,18 @@ import { SectionTitle } from "@/components/ui/SectionTitle";
 import { InstagramIcon } from "@/components/ui/icons";
 import { DemoNotice } from "@/components/ui/DemoNotice";
 
+const INSTAGRAM_PHOTO_IDS = [
+  "1738651875566-859920488d0d",
+  "1549410336-60dde98be9cc",
+  "1768853932212-2b16d6d35715",
+  "1552224614-2a4345873a96",
+  "1682917265565-ee06ea11e19f",
+  "1685703206267-314ce44ca3c8",
+];
+
 const POSTS = Array.from({ length: 6 }, (_, i) => ({
   seed: `pl-instagram-${i + 1}`,
+  photoId: INSTAGRAM_PHOTO_IDS[i % INSTAGRAM_PHOTO_IDS.length],
 }));
 
 /** Seção Instagram (briefing seção 17) — grid de posts de demonstração. */
@@ -23,7 +33,7 @@ export function InstagramSection() {
           {POSTS.map((post) => (
             <div key={post.seed} className="relative aspect-square overflow-hidden bg-rose/20">
               <Image
-                src={`https://picsum.photos/seed/${post.seed}/500/500`}
+                src={`https://images.unsplash.com/photo-${post.photoId}?w=500&h=500&fit=crop&crop=entropy&q=80&auto=format`}
                 alt="Post de demonstração do Instagram Paula Lourenço Store"
                 fill
                 sizes="(min-width: 768px) 16vw, 33vw"

@@ -4,10 +4,10 @@ import { Container } from "@/components/ui/Container";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
 const OCCASIONS = [
-  { slug: "dia", label: "Para o dia", seed: "pl-occasion-dia" },
-  { slug: "noite", label: "Para a noite", seed: "pl-occasion-noite" },
-  { slug: "trabalho", label: "Para trabalhar", seed: "pl-occasion-trabalho" },
-  { slug: "celebrar", label: "Para celebrar", seed: "pl-occasion-celebrar" },
+  { slug: "dia", label: "Para o dia", photoId: "1738651875566-859920488d0d" },
+  { slug: "noite", label: "Para a noite", photoId: "1768853932212-2b16d6d35715" },
+  { slug: "trabalho", label: "Para trabalhar", photoId: "1767631338127-8cd80ee2f9df" },
+  { slug: "celebrar", label: "Para celebrar", photoId: "1685703206267-314ce44ca3c8" },
 ] as const;
 
 /**
@@ -27,7 +27,7 @@ export function ShopByOccasion() {
               className="group relative flex aspect-[3/4] items-end overflow-hidden bg-rose/20"
             >
               <Image
-                src={`https://picsum.photos/seed/${occasion.seed}/800/1100`}
+                src={`https://images.unsplash.com/photo-${occasion.photoId}?w=800&h=1100&fit=crop&crop=entropy&q=80&auto=format`}
                 alt={`${occasion.label} — imagem de demonstração`}
                 fill
                 sizes="(min-width: 1024px) 24vw, 46vw"

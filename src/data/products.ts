@@ -8,10 +8,10 @@ import type { Product } from "./types";
  *  IMAGENS) são de DEMONSTRAÇÃO, criados apenas para testar a interface do
  *  site (briefing seção 42). Eles NÃO representam o catálogo real da loja.
  *
- *  As imagens usam picsum.photos com seed fixa por produto/foto — são fotos
- *  de banco de imagens aleatórias, não fotos reais das peças da Paula
- *  Lourenço Store. Ver o alt text de cada imagem e o aviso de demonstração
- *  exibido no rodapé do site.
+ *  As imagens usam fotos de moda feminina do Unsplash (banco de imagens
+ *  gratuito, licença Unsplash), escolhidas por categoria de peça — não são
+ *  fotos reais das peças da Paula Lourenço Store. Ver o alt text de cada
+ *  imagem e o aviso de demonstração exibido no rodapé do site.
  *
  *  Para publicar o catálogo real, basta substituir os campos deste arquivo
  *  (ou migrar para um CMS/headless commerce) mantendo o mesmo formato do
@@ -40,23 +40,23 @@ export const products: Product[] = [
     },
     "imagens": [
       {
-        "url": "https://picsum.photos/seed/pl-aurora-0/1000/1300",
+        "url": "https://images.unsplash.com/photo-1549410336-60dde98be9cc?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Vestido Midi Aurora — frente (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-aurora-1/1000/1300",
+        "url": "https://images.unsplash.com/photo-1549410336-60dde98be9cc?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Vestido Midi Aurora — costas (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-aurora-2/1000/1300",
+        "url": "https://images.unsplash.com/photo-1549410336-60dde98be9cc?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Vestido Midi Aurora — lateral (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-aurora-3/1000/1300",
+        "url": "https://images.unsplash.com/photo-1549410336-60dde98be9cc?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Vestido Midi Aurora — detalhe do tecido (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-aurora-4/1000/1300",
+        "url": "https://images.unsplash.com/photo-1549410336-60dde98be9cc?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Vestido Midi Aurora — modelo vestindo (imagem de demonstração, não é foto real da peça)"
       }
     ],
@@ -184,23 +184,23 @@ export const products: Product[] = [
     },
     "imagens": [
       {
-        "url": "https://picsum.photos/seed/pl-helena-0/1000/1300",
+        "url": "https://images.unsplash.com/photo-1685703206267-314ce44ca3c8?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Conjunto Helena — frente (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-helena-1/1000/1300",
+        "url": "https://images.unsplash.com/photo-1685703206267-314ce44ca3c8?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Conjunto Helena — costas (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-helena-2/1000/1300",
+        "url": "https://images.unsplash.com/photo-1685703206267-314ce44ca3c8?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Conjunto Helena — lateral (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-helena-3/1000/1300",
+        "url": "https://images.unsplash.com/photo-1685703206267-314ce44ca3c8?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Conjunto Helena — detalhe do tecido (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-helena-4/1000/1300",
+        "url": "https://images.unsplash.com/photo-1685703206267-314ce44ca3c8?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Conjunto Helena — modelo vestindo (imagem de demonstração, não é foto real da peça)"
       }
     ],
@@ -323,19 +323,19 @@ export const products: Product[] = [
     },
     "imagens": [
       {
-        "url": "https://picsum.photos/seed/pl-sofia-0/1000/1300",
+        "url": "https://images.unsplash.com/photo-1738651875566-859920488d0d?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Blusa Sofia — frente (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-sofia-1/1000/1300",
+        "url": "https://images.unsplash.com/photo-1738651875566-859920488d0d?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Blusa Sofia — costas (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-sofia-2/1000/1300",
+        "url": "https://images.unsplash.com/photo-1738651875566-859920488d0d?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Blusa Sofia — lateral (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-sofia-3/1000/1300",
+        "url": "https://images.unsplash.com/photo-1738651875566-859920488d0d?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Blusa Sofia — detalhe do tecido (imagem de demonstração, não é foto real da peça)"
       }
     ],
@@ -461,19 +461,19 @@ export const products: Product[] = [
     },
     "imagens": [
       {
-        "url": "https://picsum.photos/seed/pl-luna-0/1000/1300",
+        "url": "https://images.unsplash.com/photo-1767631338127-8cd80ee2f9df?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Calça Alfaiataria Luna — frente (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-luna-1/1000/1300",
+        "url": "https://images.unsplash.com/photo-1767631338127-8cd80ee2f9df?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Calça Alfaiataria Luna — costas (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-luna-2/1000/1300",
+        "url": "https://images.unsplash.com/photo-1767631338127-8cd80ee2f9df?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Calça Alfaiataria Luna — lateral (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-luna-3/1000/1300",
+        "url": "https://images.unsplash.com/photo-1767631338127-8cd80ee2f9df?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Calça Alfaiataria Luna — detalhe do tecido (imagem de demonstração, não é foto real da peça)"
       }
     ],
@@ -594,19 +594,19 @@ export const products: Product[] = [
     },
     "imagens": [
       {
-        "url": "https://picsum.photos/seed/pl-serena-0/1000/1300",
+        "url": "https://images.unsplash.com/photo-1682917265565-ee06ea11e19f?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Short Serena — frente (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-serena-1/1000/1300",
+        "url": "https://images.unsplash.com/photo-1682917265565-ee06ea11e19f?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Short Serena — costas (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-serena-2/1000/1300",
+        "url": "https://images.unsplash.com/photo-1682917265565-ee06ea11e19f?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Short Serena — lateral (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-serena-3/1000/1300",
+        "url": "https://images.unsplash.com/photo-1682917265565-ee06ea11e19f?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Short Serena — detalhe do tecido (imagem de demonstração, não é foto real da peça)"
       }
     ],
@@ -728,23 +728,23 @@ export const products: Product[] = [
     },
     "imagens": [
       {
-        "url": "https://picsum.photos/seed/pl-maya-0/1000/1300",
+        "url": "https://images.unsplash.com/photo-1768853932212-2b16d6d35715?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Vestido Maya — frente (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-maya-1/1000/1300",
+        "url": "https://images.unsplash.com/photo-1768853932212-2b16d6d35715?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Vestido Maya — costas (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-maya-2/1000/1300",
+        "url": "https://images.unsplash.com/photo-1768853932212-2b16d6d35715?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Vestido Maya — lateral (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-maya-3/1000/1300",
+        "url": "https://images.unsplash.com/photo-1768853932212-2b16d6d35715?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Vestido Maya — detalhe do tecido (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-maya-4/1000/1300",
+        "url": "https://images.unsplash.com/photo-1768853932212-2b16d6d35715?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Vestido Maya — modelo vestindo (imagem de demonstração, não é foto real da peça)"
       }
     ],
@@ -865,19 +865,19 @@ export const products: Product[] = [
     },
     "imagens": [
       {
-        "url": "https://picsum.photos/seed/pl-bianca-0/1000/1300",
+        "url": "https://images.unsplash.com/photo-1747817230321-4ad317ac0809?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Conjunto Bianca — frente (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-bianca-1/1000/1300",
+        "url": "https://images.unsplash.com/photo-1747817230321-4ad317ac0809?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Conjunto Bianca — costas (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-bianca-2/1000/1300",
+        "url": "https://images.unsplash.com/photo-1747817230321-4ad317ac0809?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Conjunto Bianca — lateral (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-bianca-3/1000/1300",
+        "url": "https://images.unsplash.com/photo-1747817230321-4ad317ac0809?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Conjunto Bianca — detalhe do tecido (imagem de demonstração, não é foto real da peça)"
       }
     ],
@@ -997,15 +997,15 @@ export const products: Product[] = [
     },
     "imagens": [
       {
-        "url": "https://picsum.photos/seed/pl-isadora-0/1000/1300",
+        "url": "https://images.unsplash.com/photo-1738651875566-859920488d0d?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Blusa Isadora — frente (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-isadora-1/1000/1300",
+        "url": "https://images.unsplash.com/photo-1738651875566-859920488d0d?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Blusa Isadora — costas (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-isadora-2/1000/1300",
+        "url": "https://images.unsplash.com/photo-1738651875566-859920488d0d?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Blusa Isadora — lateral (imagem de demonstração, não é foto real da peça)"
       }
     ],
@@ -1131,19 +1131,19 @@ export const products: Product[] = [
     },
     "imagens": [
       {
-        "url": "https://picsum.photos/seed/pl-nina-0/1000/1300",
+        "url": "https://images.unsplash.com/photo-1767631338127-8cd80ee2f9df?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Calça Wide Leg Nina — frente (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-nina-1/1000/1300",
+        "url": "https://images.unsplash.com/photo-1767631338127-8cd80ee2f9df?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Calça Wide Leg Nina — costas (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-nina-2/1000/1300",
+        "url": "https://images.unsplash.com/photo-1767631338127-8cd80ee2f9df?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Calça Wide Leg Nina — lateral (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-nina-3/1000/1300",
+        "url": "https://images.unsplash.com/photo-1767631338127-8cd80ee2f9df?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Calça Wide Leg Nina — detalhe do tecido (imagem de demonstração, não é foto real da peça)"
       }
     ],
@@ -1261,15 +1261,15 @@ export const products: Product[] = [
     "emPromocao": false,
     "imagens": [
       {
-        "url": "https://picsum.photos/seed/pl-alma-0/1000/1300",
+        "url": "https://images.unsplash.com/photo-1552224614-2a4345873a96?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Cinto Alma — frente (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-alma-1/1000/1300",
+        "url": "https://images.unsplash.com/photo-1552224614-2a4345873a96?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Cinto Alma — costas (imagem de demonstração, não é foto real da peça)"
       },
       {
-        "url": "https://picsum.photos/seed/pl-alma-2/1000/1300",
+        "url": "https://images.unsplash.com/photo-1552224614-2a4345873a96?w=1000&h=1300&fit=crop&crop=entropy&q=80&auto=format",
         "alt": "Cinto Alma — lateral (imagem de demonstração, não é foto real da peça)"
       }
     ],

@@ -10,7 +10,7 @@ export function EditorialBanner() {
   return (
     <section className="relative h-[70vh] min-h-[420px] max-h-[640px] w-full overflow-hidden bg-rose/25">
       <Image
-        src="https://picsum.photos/seed/pl-editorial-banner/1800/1000"
+        src="https://images.unsplash.com/photo-1747817230321-4ad317ac0809?w=1800&h=1000&fit=crop&crop=entropy&q=80&auto=format"
         alt="Nova coleção Paula Lourenço Store — campanha editorial (imagem de demonstração)"
         fill
         sizes="100vw"
