@@ -56,13 +56,13 @@ export function CartDrawer() {
             <div className="px-5 pb-5">
               <CartSummary compact />
               <div className="mt-3 flex flex-col items-center gap-2">
-                <button
-                  type="button"
+                <Link
+                  href="/catalogo"
                   onClick={closeCart}
                   className="text-[12px] font-medium uppercase tracking-[0.12em] text-ink underline-offset-4 hover:text-wine hover:underline"
                 >
                   Continuar comprando
-                </button>
+                </Link>
                 <Link
                   href="/carrinho"
                   onClick={closeCart}
